@@ -1,0 +1,18 @@
+#piechart{
+	max-width: 50%;
+	max-height: 400px;
+	margin-left: 20%;
+}
+
+.delete{
+	display:block;
+	clear: both;
+}
+
+.select-options {
+	margin: 20px;
+}
+
+.btn{
+	margin-right: 5px;
+}

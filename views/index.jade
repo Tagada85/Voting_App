@@ -1,0 +1,17 @@
+extends layout
+block content
+
+	h1 Welcome to my voting App!!
+	h2 Check all the polls or create a new one
+	div
+		ul.list-group
+		each poll in polls
+			li.list-group-item
+				a(href='/polls/' + poll._id)=poll.question 
+			br		
+	
+
+
+	
+	
+		

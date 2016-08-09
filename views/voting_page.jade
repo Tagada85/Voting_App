@@ -1,0 +1,21 @@
+extends layout
+block content
+	- var creator = poll.creator
+	h1=poll.question
+	div.pull-left
+		h3 Cast your Vote!
+		select(id="voteOption").select-options
+			each option in poll.options
+				option=option.text  
+		button(id="voteBtn").btn Submit Vote
+		if user
+			button(id="newAnswer").btn Add custom answer
+	form#newAnswerForm
+		input(type="text" id="custom")
+		input(type="submit" value="submit Answer" onClick="addCustomAnswer()")
+	if user
+		if user.name = creator
+			button(onClick="deletePoll()").btn.btn-danger.delete Delete this poll
+	canvas(id='piechart')
+
+	script(src="./scripts/pollLogic.js")

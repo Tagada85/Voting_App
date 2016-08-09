@@ -1,0 +1,10 @@
+extends layout
+block content
+
+	h2 These are the polls you created #{user.name}
+	div.jumbotron
+		ul.list-group
+		each poll in polls
+			li.list-group-item
+				a(href='/polls/' + poll._id)=poll.question
+			br

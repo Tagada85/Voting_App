@@ -1,0 +1,19 @@
+extends layout
+block content
+
+
+	h1 This is where you add a new poll
+	h3 Create new poll
+	
+	.form-group
+		label(for="title") Title: 
+		input(type="text" id="title" name="title")
+	br
+	.form-group
+		label(for="options") Options: (separated by comma, no space after comma)
+		input(type="text" id="options" name="options")
+	br
+	input(type='submit' value='create new poll' onClick='createNewPoll()')
+
+	script(src="scripts/newPoll.js")
+
